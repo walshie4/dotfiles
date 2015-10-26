@@ -25,6 +25,32 @@ setopt PROMPT_SUBST
 setopt RM_STAR_WAIT
 unsetopt beep
 bindkey -v
+autoload -U compinit
+compinit
+setopt completeinword
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd'
+autoload select-word-style
+select-word-style shell
+# colors for ls
+if [[ -x "`whence -p dircolors`" ]]; then
+  eval `dircolors`
+  alias ls='ls -F --color=auto'
+else
+  alias ls='ls -F'
+fi
+
+alias la='ls -a'
+
+# superglobs
+setopt extendedglob
+unsetopt caseglob
+
+setopt interactivecomments # pound sign in interactive prompt
+
+setopt auto_cd
+
+REPORTTIME=10
 
 # User configuration
 
