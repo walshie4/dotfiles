@@ -82,6 +82,8 @@ if exists("&relativenumber")
 endif
 " Start scrolling five lines before the horizontal window border
 set scrolloff=5
+" If file changes outside of vim, autoreload it
+:set autoread
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
@@ -144,7 +146,7 @@ if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
   runtime! macros/matchit.vim
 endif
 
-filetype plugin indent on
+filetype plugin on
 
 augroup vimrcEx
   autocmd!
