@@ -74,7 +74,9 @@ export ARCHFLAGS="-arch x86_64"
 eval $(thefuck --alias)
 alias wallsane='~/Developer/wallsane/wallsane.sh -d ~/Backgrounds'
 alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
-alias gpom='git pull origin master'
+alias glom='git pull origin master'
+alias note='read entry; echo $entry >> ~/thatwhichisup.txt'
+alias notes='cat ~/thatwhichisup.txt'
 
 ##### OSX SPECIFIC OPTIONS ###################################################
 if [[ $HOME == /Users/* ]]; then
