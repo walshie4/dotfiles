@@ -1,0 +1,9 @@
+[user]
+  name = Adam Walsh
+  email = adamwalsh14@gmail.com
+[core]
+  editor = /usr/bin/vim
+[credential]
+  helper = osxkeychain
+[push]
+  default = matching
