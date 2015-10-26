@@ -30,8 +30,9 @@ function doIt() {
   ./update_pathogen.sh # install / update pathogen again to update plugins
   sudo chsh -s $(which zsh) $(whoami) # change shell to zsh
 
-  rsync --exclude ".git/" --exclude ".DS_Store" \
-    --exclude "README.md" --exclude "LICENSE.txt" -avh --no-perms . ~;
+  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "setup.sh" \
+    --exclude "README.md" --exclude "LICENSE.txt" \
+    --exclude "update_pathogen.sh" --exclude "Makefile" -avh --no-perms . ~;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
