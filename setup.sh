@@ -45,4 +45,4 @@ else
   fi;
 fi;
 unset doIt;
-
+echo "If you are on OS X run 'sh .osx' to manipulate OS X setting as well"
