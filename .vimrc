@@ -41,8 +41,6 @@ set secure
 set number
 " Enable syntax highlighting
 syntax on
-" Highlight current line
-set cursorline
 " Make tabs as wide as four spaces
 filetype plugin indent on
 set tabstop=4

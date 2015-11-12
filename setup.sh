@@ -27,6 +27,7 @@ function doIt() {
   git clone https://github.com/godlygeek/tabular.git        ~/.vim/bundle/tabular
   git clone https://github.com/vim-scripts/matchit.zip.git  ~/.vim/bundle/matchit
   git clone https://github.com/Yggdroot/indentLine.git      ~/.vim/bundle/indentLine
+  git clone https://github.com/wincent/command-t.git        ~/.vim/bundle/command-t
   mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   ./update_pathogen.sh # install / update pathogen again to update plugins
   sudo chsh -s $(which zsh) $(whoami) # change shell to zsh
