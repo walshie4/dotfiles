@@ -95,3 +95,6 @@ RPROMPT='[%{$fg[grey]%}%W %*%{$reset_color%}]'
 PROMPT='%{$fg[red]%}%(1j.%j .)%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%~ %{$fg[cyan]%}{$(git_prompt_info)}%{$reset_color%} '
 # on start commands
 echo "-... .-. . .- - .... ." | fmt -c -w $COLUMNS
+
+alias p='~/bin/p'
+
