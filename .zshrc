@@ -60,6 +60,9 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/ad
 source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
+export PATH=$PATH:/Users/adamwalsh/Developer/depot_tools
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -77,6 +80,7 @@ alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resourc
 alias glom='git pull origin master'
 alias note='read entry; echo $entry >> ~/thatwhichisup.txt'
 alias notes='cat ~/thatwhichisup.txt'
+alias p='~/bin/p'
 
 ##### OSX SPECIFIC OPTIONS ###################################################
 if [[ $HOME == /Users/* ]]; then
@@ -95,6 +99,4 @@ RPROMPT='[%{$fg[grey]%}%W %*%{$reset_color%}]'
 PROMPT='%{$fg[red]%}%(1j.%j .)%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%~ %{$fg[cyan]%}{$(git_prompt_info)}%{$reset_color%} '
 # on start commands
 echo "-... .-. . .- - .... ." | fmt -c -w $COLUMNS
-
-alias p='~/bin/p'
 
