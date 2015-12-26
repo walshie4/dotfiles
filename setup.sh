@@ -6,7 +6,7 @@ git pull origin master;
 
 function doIt() {
   unset ZSH
-  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # install oh-my-zsh
+  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   sudo apt-get install python-pip python-dev
   sudo pip install psutil thefuck # install thefuck on Ubuntu
   brew install thefuck # install thefuck on OS X
@@ -18,7 +18,7 @@ function doIt() {
   git clone git@github.com:Bling/vim-airline.git        ~/.vim/bundle/vim-airline
   git clone git@github.com:tpope/vim-surround.git       ~/.vim/bundle/vim-surround
   git clone git@github.com:mustache/mustache.git        ~/.vim/bundle/mustache
-  git clone git@github.com:vbundles/nerdtree.git        ~/.vim/bundle/nerdtree
+  git clone git@github.com:scrooloose/nerdtree.git      ~/.vim/bundle/nerdtree
   git clone git@github.com:mattn/emmet-vim.git          ~/.vim/bundle/emmet-vim
   git clone git@github.com:scrooloose/syntastic.git     ~/.vim/bundle/syntastic
   git clone git@github.com:ervandew/supertab.git        ~/.vim/bundle/supertab
