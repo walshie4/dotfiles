@@ -17,6 +17,8 @@ function doIt() {
   git clone git@github.com:wavded/vim-stylus.git        ~/.vim/bundle/vim-stylus
   git clone git@github.com:Bling/vim-airline.git        ~/.vim/bundle/vim-airline
   git clone git@github.com:tpope/vim-surround.git       ~/.vim/bundle/vim-surround
+  git clone git@github.com:pangloss/vim-javascript.git  ~/.vim/bundle/vim-javascript
+  git clone git@github.com:mxw/vim-jsx.git              ~/.vim/bundle/vim-jsx
   git clone git@github.com:mustache/mustache.git        ~/.vim/bundle/mustache
   git clone git@github.com:scrooloose/nerdtree.git      ~/.vim/bundle/nerdtree
   git clone git@github.com:mattn/emmet-vim.git          ~/.vim/bundle/emmet-vim
@@ -27,7 +29,6 @@ function doIt() {
   git clone git@github.com:vim-scripts/matchit.zip.git  ~/.vim/bundle/matchit
   git clone git@github.com:Yggdroot/indentLine.git      ~/.vim/bundle/indentLine
   git clone git@github.com:wincent/command-t.git        ~/.vim/bundle/command-t
-  git clone git@github.com:mxw/vim-jsx.git              ~/.vim/bundle/vim-jsx
   mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   ./update_pathogen.sh # install / update pathogen again to update plugins
   sudo chsh -s $(which zsh) $(whoami) # change shell to zsh
