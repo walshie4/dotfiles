@@ -81,6 +81,7 @@ alias glom='git pull origin master'
 alias note='read entry; echo $entry >> ~/thatwhichisup.txt'
 alias notes='cat ~/thatwhichisup.txt'
 alias p='~/bin/p'
+alias tmux='tmux -u'
 
 ##### OSX SPECIFIC OPTIONS ###################################################
 if [[ $HOME == /Users/* ]]; then
