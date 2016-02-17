@@ -22,7 +22,6 @@ function doIt() {
   git clone git@github.com:mustache/mustache.git        ~/.vim/bundle/mustache
   git clone git@github.com:scrooloose/nerdtree.git      ~/.vim/bundle/nerdtree
   git clone git@github.com:mattn/emmet-vim.git          ~/.vim/bundle/emmet-vim
-  git clone git@github.com:scrooloose/syntastic.git     ~/.vim/bundle/syntastic
   git clone git@github.com:ervandew/supertab.git        ~/.vim/bundle/supertab
   git clone git@github.com:tpope/Vim-fugitive.git       ~/.vim/bundle/Vim-fugitive
   git clone git@github.com:godlygeek/tabular.git        ~/.vim/bundle/tabular
