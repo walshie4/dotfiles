@@ -63,13 +63,7 @@ export LANG=en_US.UTF-8
 export PATH=$PATH:/Users/adamwalsh/Developer/depot_tools
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+export EDITOR=vim
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
