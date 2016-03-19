@@ -64,6 +64,8 @@ export PATH=$PATH:/Users/adamwalsh/Developer/depot_tools
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 export EDITOR=vim
+export NVM_DIR=~/.nvm
+. $(brew --prefix nvm)/nvm.sh
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
