@@ -259,4 +259,4 @@ nnoremap <leader><space> :nohlsearch<CR>
 nnoremap B ^
 nnoremap E $
 
-
+set wildignore+=**/node_modules/*
