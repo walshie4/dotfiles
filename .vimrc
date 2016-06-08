@@ -18,12 +18,9 @@ set gdefault
 set encoding=utf-8 nobomb
 " Change mapleader
 let mapleader=","
-" Don’t add empty newlines at the end of files
-set binary
-set noeol
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
-" set directory=~/.vim/swaps
+set directory=~/.vim/swaps
 if exists("&undodir")
   set undodir=~/.vim/undo
 endif
@@ -78,8 +75,8 @@ if exists("&relativenumber")
   set relativenumber
   au BufReadPost * set relativenumber
 endif
-" Start scrolling five lines before the horizontal window border
-set scrolloff=5
+" Start scrolling ten lines before the horizontal window border
+set scrolloff=10
 " If file changes outside of vim, autoreload it
 :set autoread
 
@@ -117,8 +114,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
 "Begin Thoughtbot dotfiles vimrc
-" Leader
-let mapleader = " "
+let mapleader=" "
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup
@@ -139,11 +135,6 @@ endif
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
-endif
-
-" Load matchit.vim, but only if the user hasn't installed a newer version.
-if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
-  runtime! macros/matchit.vim
 endif
 
 filetype plugin on
@@ -198,24 +189,6 @@ endif
 " Numbers
 set number
 set numberwidth=5
-
-" Tab completion
-" will insert tab at beginning of line,
-" will use completion if not at beginning
-set wildmode=list:longest,list:full
-function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
-endfunction
-inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <S-Tab> <c-n>
-
-" Switch between the last two files
-nnoremap <leader><leader> <c-^>
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
