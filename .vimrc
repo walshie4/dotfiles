@@ -258,5 +258,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 " move to beginning/end of line
 nnoremap B ^
 nnoremap E $
+" Align equals
+nnoremap <leader>= :EasyAlign *=<CR>
 
 set wildignore+=**/node_modules/*

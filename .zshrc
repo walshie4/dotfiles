@@ -62,6 +62,7 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export PATH=$PATH:/Users/adamwalsh/Developer/depot_tools
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export ANDROID_HOME=/usr/local/opt/android-sdk
 
 export EDITOR=vim
 
@@ -97,3 +98,4 @@ echo "use `note <enter> <your message> <enter>` to save a note"
 echo "use `notes` to see your notes`"
 echo "-... .-. . .- - .... ." | fmt -c -w $COLUMNS
 
+source ~/honey/.honeyrc
