@@ -7,8 +7,8 @@ git pull origin master;
 function doIt() {
   unset ZSH
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-  sudo apt-get install python-pip python-dev
-  sudo pip install psutil thefuck # install thefuck on Ubuntu
+  apt-get install python-pip python-dev
+  pip install psutil thefuck # install thefuck on Ubuntu
   brew install thefuck # install thefuck on OS X
   mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   git clone git@github.com:junegunn/vim-easy-align.git  ~/.vim/bundle/vim-easy-align # install pathogen plugins
@@ -25,7 +25,7 @@ function doIt() {
   git clone git@github.com:mtscout6/vim-cjsx.git        ~/.vim/bundle/vim-cjsx
   mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   ./update_pathogen.sh # install / update pathogen again to update plugins
-  sudo chsh -s $(which zsh) $(whoami) # change shell to zsh
+  chsh -s $(which zsh) $(whoami) # change shell to zsh
 
   rsync --exclude ".git/" --exclude ".DS_Store" --exclude "setup.sh" \
     --exclude "README.md" --exclude "LICENSE.txt" \
