@@ -94,8 +94,8 @@ fi
 RPROMPT='[%{$fg[grey]%}%W %*%{$reset_color%}]'
 PROMPT='%{$fg[red]%}%(1j.%j .)%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%~ %{$fg[cyan]%}{$(git_prompt_info)}%{$reset_color%} '
 # on start commands
-echo "use `note <enter> <your message> <enter>` to save a note"
-echo "use `notes` to see your notes`"
+echo "use 'note <enter> <your message> <enter>' to save a note"
+echo "use 'notes' to see your notes"
 echo "-... .-. . .- - .... ." | fmt -c -w $COLUMNS
 
 source ~/honey/.honeyrc
