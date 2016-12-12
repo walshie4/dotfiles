@@ -84,11 +84,9 @@ if [[ $HOME == /Users/* ]]; then
   alias ls='gls --color=auto'
   alias hn='open https://news.ycombinator.com'
   alias weather='open https://forecast.io'
-  eval $(gdircolors -b ~/.dir_colors)
 else
 ###### ARCH SPECIFIC OPTIONS ##################################################
-    eval $(dircolors -b ~/.dir_colors)
-    alias ls='ls --color=auto'
+  alias ls='ls --color=auto'
 fi
 
 RPROMPT='[%{$fg[grey]%}%W %*%{$reset_color%}]'
