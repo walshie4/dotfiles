@@ -97,5 +97,3 @@ PROMPT='%{$fg[red]%}%(1j.%j .)%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%
 echo "use 'note <enter> <your message> <enter>' to save a note"
 echo "use 'notes' to see your notes"
 echo "-... .-. . .- - .... ." | fmt -c -w $COLUMNS
-
-source ~/honey/.honeyrc
