@@ -81,12 +81,11 @@ alias tmux='tmux -u'
 ##### OSX SPECIFIC OPTIONS ###################################################
 if [[ $HOME == /Users/* ]]; then
   export LC_ALL=en_US.UTF-8
-  alias ls='gls --color=auto'
-  alias hn='open https://news.ycombinator.com'
-  alias weather='open https://forecast.io'
+  eval $(gdircolors -b ~/.dir_colors)
 else
 ###### ARCH SPECIFIC OPTIONS ##################################################
-  alias ls='ls --color=auto'
+    eval $(dircolors -b ~/.dir_colors)
+    alias ls='ls --color=auto'
 fi
 
 RPROMPT='[%{$fg[grey]%}%W %*%{$reset_color%}]'
