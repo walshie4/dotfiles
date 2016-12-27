@@ -94,3 +94,15 @@ PROMPT='%{$fg[red]%}%(1j.%j .)%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%
 echo "use 'note to save a note"
 echo "use 'notes' to see your notes"
 echo "-... .-. . .- - .... ." | fmt -c -w $COLUMNS
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f /Users/adamwalsh/google-cloud-sdk/path.zsh.inc ]; then
+  source '/Users/adamwalsh/google-cloud-sdk/path.zsh.inc'
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f /Users/adamwalsh/google-cloud-sdk/completion.zsh.inc ]; then
+  source '/Users/adamwalsh/google-cloud-sdk/completion.zsh.inc'
+fi
+
+source '~/.honeynpmrc'
