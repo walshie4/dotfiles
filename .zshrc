@@ -105,4 +105,4 @@ if [ -f /Users/adamwalsh/google-cloud-sdk/completion.zsh.inc ]; then
   source '/Users/adamwalsh/google-cloud-sdk/completion.zsh.inc'
 fi
 
-source '~/.honeynpmrc'
+source '/Users/adamwalsh/.honeynpmrc'
