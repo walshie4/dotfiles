@@ -73,8 +73,8 @@ eval $(thefuck --alias)
 alias wallsane='~/Developer/wallsane/wallsane.sh -d ~/Backgrounds'
 alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 alias glom='git pull origin master'
-alias note='read entry; echo $entry >> ~/thatwhichisup.txt'
-alias notes='cat ~/thatwhichisup.txt'
+alias note='node ~/Developer/write-land/index.js'
+alias notes='node ~/Developer/write-land/index.js -l'
 alias p='~/bin/p'
 alias tmux='tmux -u'
 
@@ -91,6 +91,6 @@ fi
 RPROMPT='[%{$fg[grey]%}%W %*%{$reset_color%}]'
 PROMPT='%{$fg[red]%}%(1j.%j .)%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%~ %{$fg[cyan]%}{$(git_prompt_info)}%{$reset_color%} '
 # on start commands
-echo "use 'note <enter> <your message> <enter>' to save a note"
+echo "use 'note to save a note"
 echo "use 'notes' to see your notes"
 echo "-... .-. . .- - .... ." | fmt -c -w $COLUMNS
