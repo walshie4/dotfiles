@@ -73,8 +73,8 @@ eval $(thefuck --alias)
 alias wallsane='~/Developer/wallsane/wallsane.sh -d ~/Backgrounds'
 alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 alias glom='git pull origin master'
-alias note='node ~/Developer/write-land/index.js'
-alias notes='node ~/Developer/write-land/index.js -l'
+alias note='node ~/Developer/notebook/index.js'
+alias notes='node ~/Developer/notebook/index.js -l'
 alias p='~/bin/p'
 alias tmux='tmux -u'
 
