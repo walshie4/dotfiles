@@ -153,7 +153,6 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle command-not-found
 antigen bundle npm
-antigen bundle arialdomartini/oh-my-git
 antigen bundle cp
 antigen bundle docker
 antigen bundle ddollar/git-utils
@@ -161,7 +160,7 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle dbkaplun/smart-cd
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zdharma/fast-syntax-highlighting
-# temp
+
 antigen theme simple
 
 # Syntax highlighting bundle.
