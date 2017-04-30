@@ -88,8 +88,9 @@ else
     alias ls='ls --color=auto'
 fi
 
+# Time on the right
 RPROMPT='[%{$fg[grey]%}%W %*%{$reset_color%}]'
-PROMPT='%{$fg[red]%}%(1j.%j .)%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%~ %{$fg[cyan]%}{$(git_prompt_info)}%{$reset_color%} '
+# PROMPT='%{$fg[red]%}%(1j.%j .)%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%~ %{$fg[cyan]%}{$(git_prompt_info)}%{$reset_color%} '
 # on start commands
 echo "use 'note to save a note"
 echo "use 'notes' to see your notes"
@@ -174,3 +175,5 @@ transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho
 tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias branchrm='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
