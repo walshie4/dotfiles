@@ -89,8 +89,8 @@ endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
-" CommandT
-noremap <leader>t :CommandT<CR>
+
+noremap <leader>m :FZF<CR>
 
 " Automatic commands
 if has("autocmd")
@@ -248,3 +248,8 @@ nnoremap E $
 nnoremap <leader>= :EasyAlign *=<CR>
 
 set wildignore+=**/node_modules/*
+
+set clipboard=unnamed
+
+" fzf
+set rtp+=/usr/local/opt/fzf

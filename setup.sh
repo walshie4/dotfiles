@@ -21,7 +21,6 @@ function doIt() {
   git clone git@github.com:scrooloose/nerdtree.git      ~/.vim/bundle/nerdtree
   git clone git@github.com:tpope/Vim-fugitive.git       ~/.vim/bundle/Vim-fugitive
   git clone git@github.com:Yggdroot/indentLine.git      ~/.vim/bundle/indentLine
-  git clone git@github.com:wincent/command-t.git        ~/.vim/bundle/command-t
   git clone git@github.com:mtscout6/vim-cjsx.git        ~/.vim/bundle/vim-cjsx
   mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   ./update_pathogen.sh # install / update pathogen again to update plugins
