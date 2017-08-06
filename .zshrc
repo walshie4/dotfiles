@@ -160,7 +160,9 @@ antigen bundle ddollar/git-utils
 antigen bundle zsh-users/zsh-completions
 antigen bundle dbkaplun/smart-cd
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
 antigen bundle zdharma/fast-syntax-highlighting
+antigen bundle alexrochas/zsh-git-semantic-commits
 
 antigen theme simple
 
@@ -171,9 +173,20 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
 # transfer.io
-transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi 
+transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
 tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias branchrm='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+
+autoload -U compinit && compinit
+zmodload -i zsh/complist
+
+. /Users/adamwalsh/Developer/z/z.sh
+
+export PATH="$HOME/.yarn/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
