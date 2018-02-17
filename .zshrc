@@ -77,6 +77,7 @@ alias note='node ~/Developer/notebook/index.js'
 alias notes='node ~/Developer/notebook/index.js -l'
 alias p='~/bin/p'
 alias tmux='tmux -u'
+alias myip='curl https://canihazip.com/s'
 
 ##### OSX SPECIFIC OPTIONS ###################################################
 if [[ $HOME == /Users/* ]]; then
