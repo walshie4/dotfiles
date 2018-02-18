@@ -1,8 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/adamwalsh/.oh-my-zsh
 
-ZSH_THEME="agnoster"
-
 HYPHEN_INSENSITIVE="true"
 
 export UPDATE_ZSH_DAYS=1
@@ -72,22 +70,12 @@ export ARCHFLAGS="-arch x86_64"
 eval $(thefuck --alias)
 alias wallsane='~/Developer/wallsane/wallsane.sh -d ~/Backgrounds'
 alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
-alias glom='git pull origin master'
+alias gpom='git pull origin master'
 alias note='node ~/Developer/notebook/index.js'
 alias notes='node ~/Developer/notebook/index.js -l'
 alias p='~/bin/p'
 alias tmux='tmux -u'
 alias myip='curl https://canihazip.com/s'
-
-##### OSX SPECIFIC OPTIONS ###################################################
-if [[ $HOME == /Users/* ]]; then
-  export LC_ALL=en_US.UTF-8
-  eval $(gdircolors -b ~/.dir_colors)
-else
-###### ARCH SPECIFIC OPTIONS ##################################################
-    eval $(dircolors -b ~/.dir_colors)
-    alias ls='ls --color=auto'
-fi
 
 # Time on the right
 RPROMPT='[%{$fg[grey]%}%W %*%{$reset_color%}]'
@@ -109,66 +97,29 @@ fi
 
 source '/Users/adamwalsh/.honeynpmrc'
 
-# List of accounts to read the last tweet from, comma separated
-# The first in the list is read by the party parrot.
-export TTC_BOTS='tinycarebot,selfcare_bot,magicrealismbot'
-
-# Use this to have a different animal say a message in the big box.
-export TTC_SAY_BOX="cat"
-
-# List of folders to look into for `git` commits, comma separated.
-export TTC_REPOS='~/Developer,~/Honey'
-
-# The max directory-depth to look for git repositories in
-# the directories defined with `TTC_REPOS`. Note that the deeper
-# the directory depth, the slower the results will be fetched.
-
-export TTC_REPOS_DEPTH=2
-
-# Location/zip code to check the weather for. Both 90210 and "San Francisco, CA"
-# _should_ be ok (the zip code doesn't always work -- use a location
-# first, if you can). It's using weather.service.msn.com behind the curtains.
-export TTC_WEATHER='Los Angeles, CA'
-
-# Set to false if you're an imperial savage. <3
-export TTC_CELSIUS=true
-
-# Unset this if you _don't_ want to use Twitter keys and want to
-# use web scraping instead.
-export TTC_APIKEYS=true
-
-# Refresh the dashboard every 20 minutes.
-export TTC_UPDATE_INTERVAL=20
-
-# Twitter api keys
-export TTC_CONSUMER_KEY='NmdDjNMncjMXLAJyyAtP49Glg'
-export TTC_CONSUMER_SECRET='jOXfyLsF5DSiiqRu2Dmbr6cPmwwMTvUoFVp4CTsJlZxuRbDYtc'
-export TTC_ACCESS_TOKEN='920114426-Td3oYUIqhTcLGRYwFGqP2DeppuwyHgYHNWhUT66g'
-export TTC_ACCESS_TOKEN_SECRET='TkQzFSa5VOCbBG6mAlCEBjO1rV6r1AQ5fxesxrbxyqXVO'
-
 # Antigen
-source /Users/adamwalsh/Developer/dotfiles/antigen/antigen.zsh
+source /usr/local/share/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
 antigen bundle git
-antigen bundle command-not-found
+#antigen bundle command-not-found
 antigen bundle npm
-antigen bundle cp
-antigen bundle docker
-antigen bundle ddollar/git-utils
-antigen bundle zsh-users/zsh-completions
-antigen bundle dbkaplun/smart-cd
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-completions
-antigen bundle zdharma/fast-syntax-highlighting
-antigen bundle alexrochas/zsh-git-semantic-commits
+#antigen bundle cp
+#antigen bundle docker
+#antigen bundle ddollar/git-utils
+#antigen bundle zsh-users/zsh-completions
+#antigen bundle dbkaplun/smart-cd
+#antigen bundle zsh-users/zsh-autosuggestions
+#antigen bundle zsh-users/zsh-completions
+#antigen bundle zdharma/fast-syntax-highlighting
+#antigen bundle alexrochas/zsh-git-semantic-commits
 
 antigen theme simple
 
 # Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
+#antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Fin.
 antigen apply
