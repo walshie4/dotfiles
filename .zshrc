@@ -147,3 +147,5 @@ bindkey "[D" backward-word
 bindkey "[C" forward-word
 bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
+# Add fastlane to path
+export PATH="$HOME/.fastlane/bin:$PATH"

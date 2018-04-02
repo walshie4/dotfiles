@@ -24,6 +24,8 @@ function doIt() {
   git clone git@github.com:mtscout6/vim-cjsx.git        ~/.vim/bundle/vim-cjsx
   git clone git@github.com:jparise/vim-graphql.git      ~/.vim/bundle/vim-graphql
   git clone --depth=1 git@github.com:vim-syntastic/syntastic.git ~/.vim/bundle/vim-syntastic
+  git clone git@github.com:fteem/git-semantic-commits.git ~/.git-semantic-commits
+  sh ~/.git-semantic-commits/install.sh
   mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   ./update_pathogen.sh # install / update pathogen again to update plugins
   chsh -s $(which zsh) $(whoami) # change shell to zsh
