@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/adamwalsh/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 HYPHEN_INSENSITIVE="true"
 
@@ -52,28 +52,20 @@ REPORTTIME=10
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/adamwalsh/.rvm/gems/ruby-2.1.6@scripts/bin:/Users/adamwalsh/.rvm/gems/ruby-2.1.6@global/bin:/Users/adamwalsh/.rvm/rubies/ruby-2.1.6/bin:/Users/adamwalsh/.rvm/gems/ruby-2.1.6@npscripts/bin:/Users/adamwalsh/.rvm/bin:/Users/adamwalsh/depot_tools:/Users/adamwalsh/.rvm/bin:/Users/adamwalsh/depot_tools"
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
-export PATH=$PATH:/Users/adamwalsh/Developer/depot_tools
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
-export ANDROID_HOME=/usr/local/opt/android-sdk
 
 export EDITOR=vim
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
-eval $(thefuck --alias)
-alias wallsane='~/Developer/wallsane/wallsane.sh -d ~/Backgrounds'
-alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 alias gpom='git pull origin master'
-alias note='node ~/Developer/notebook/index.js'
-alias notes='node ~/Developer/notebook/index.js -l'
-alias p='~/bin/p'
+alias p='$HOME/bin/p'
 alias tmux='tmux -u'
 alias myip='curl https://canihazip.com/s'
 
@@ -81,24 +73,12 @@ alias myip='curl https://canihazip.com/s'
 RPROMPT='[%{$fg[grey]%}%W %*%{$reset_color%}]'
 # PROMPT='%{$fg[red]%}%(1j.%j .)%{$fg[magenta]%}%n%{$fg[grey]%} @ %{$fg[yellow]%}%~ %{$fg[cyan]%}{$(git_prompt_info)}%{$reset_color%} '
 # on start commands
-echo "use 'note to save a note"
-echo "use 'notes' to see your notes"
 echo "-... .-. . .- - .... ." | fmt -c -w $COLUMNS
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f /Users/adamwalsh/google-cloud-sdk/path.zsh.inc ]; then
-  source '/Users/adamwalsh/google-cloud-sdk/path.zsh.inc'
-fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f /Users/adamwalsh/google-cloud-sdk/completion.zsh.inc ]; then
-  source '/Users/adamwalsh/google-cloud-sdk/completion.zsh.inc'
-fi
-
-source '/Users/adamwalsh/.honeynpmrc'
+source $HOME/.honeynpmrc
 
 # Antigen
-source /usr/local/share/antigen/antigen.zsh
+source $HOME/dotfiles/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -128,14 +108,12 @@ antigen apply
 transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
 tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 alias branchrm='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 
 autoload -U compinit && compinit
 zmodload -i zsh/complist
-
-. /Users/adamwalsh/Developer/z/z.sh
 
 export PATH="$HOME/.yarn/bin:$PATH"
 
