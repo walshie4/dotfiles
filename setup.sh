@@ -12,7 +12,6 @@ function doIt() {
   brew install thefuck # install thefuck on OS X
   mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   git clone git@github.com:junegunn/vim-easy-align.git  ~/.vim/bundle/vim-easy-align # install pathogen plugins
-  git clone git@github.com:kchmck/vim-coffee-script.git ~/.vim/bundle/vim-coffee-script
   git clone git@github.com:wavded/vim-stylus.git        ~/.vim/bundle/vim-stylus
   git clone git@github.com:Bling/vim-airline.git        ~/.vim/bundle/vim-airline
   git clone git@github.com:pangloss/vim-javascript.git  ~/.vim/bundle/vim-javascript
@@ -21,7 +20,6 @@ function doIt() {
   git clone git@github.com:scrooloose/nerdtree.git      ~/.vim/bundle/nerdtree
   git clone git@github.com:tpope/Vim-fugitive.git       ~/.vim/bundle/Vim-fugitive
   git clone git@github.com:Yggdroot/indentLine.git      ~/.vim/bundle/indentLine
-  git clone git@github.com:mtscout6/vim-cjsx.git        ~/.vim/bundle/vim-cjsx
   git clone git@github.com:jparise/vim-graphql.git      ~/.vim/bundle/vim-graphql
   git clone --depth=1 git@github.com:vim-syntastic/syntastic.git ~/.vim/bundle/vim-syntastic
   git clone git@github.com:fteem/git-semantic-commits.git ~/.git-semantic-commits
