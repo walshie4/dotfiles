@@ -21,6 +21,7 @@ function doIt() {
   git clone git@github.com:tpope/Vim-fugitive.git       ~/.vim/bundle/Vim-fugitive
   git clone git@github.com:Yggdroot/indentLine.git      ~/.vim/bundle/indentLine
   git clone git@github.com:jparise/vim-graphql.git      ~/.vim/bundle/vim-graphql
+  git clone git@github.com:airblade/vim-gitgutter.git   ~/.vim/bundle/vim-gitgutter
   git clone --depth=1 git@github.com:vim-syntastic/syntastic.git ~/.vim/bundle/vim-syntastic
   git clone git@github.com:fteem/git-semantic-commits.git ~/.git-semantic-commits
   sh ~/.git-semantic-commits/install.sh

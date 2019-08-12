@@ -149,3 +149,5 @@ bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
 # Add fastlane to path
 export PATH="$HOME/.fastlane/bin:$PATH"
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+chruby ruby-2.5.1

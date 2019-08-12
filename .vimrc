@@ -267,3 +267,11 @@ set rtp+=/usr/local/opt/fzf
 " let g:syntastic_ignore_files = ['*.coffee', '*.jsx']
 
 "set termguicolors
+set lazyredraw
+set smartcase
+
+augroup every
+  autocmd!
+  au InsertEnter * set norelativenumber
+  au InsertLeave * set relativenumber
+augroup END
