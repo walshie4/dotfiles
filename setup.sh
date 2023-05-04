@@ -24,6 +24,8 @@ function doIt() {
   git clone git@github.com:airblade/vim-gitgutter.git   ~/.vim/bundle/vim-gitgutter
   git clone --depth=1 git@github.com:vim-syntastic/syntastic.git ~/.vim/bundle/vim-syntastic
   git clone git@github.com:fteem/git-semantic-commits.git ~/.git-semantic-commits
+  git clone git@github.com:el-iot/vim-wikipedia-browser.git ~/.vim/bundle/vim-wikipedia-browser
+  git clone git@github.com:el-iot/buffer-tree-explorer.git ~/.vim/bundle/buffer-tree-explorer
   sh ~/.git-semantic-commits/install.sh
   mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   ./update_pathogen.sh # install / update pathogen again to update plugins
