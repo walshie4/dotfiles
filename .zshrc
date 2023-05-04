@@ -95,10 +95,8 @@ if [ -f /Users/adamwalsh/google-cloud-sdk/completion.zsh.inc ]; then
   source '/Users/adamwalsh/google-cloud-sdk/completion.zsh.inc'
 fi
 
-source '/Users/adamwalsh/.honeynpmrc'
-
 # Antigen
-source /usr/local/share/antigen/antigen.zsh
+source /opt/homebrew/share/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -135,13 +133,13 @@ alias branchrm='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git br
 autoload -U compinit && compinit
 zmodload -i zsh/complist
 
-. /Users/adamwalsh/Developer/z/z.sh
+. /opt/homebrew/etc/profile.d/z.sh
 
 export PATH="$HOME/.yarn/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 bindkey "[D" backward-word
 bindkey "[C" forward-word
@@ -149,5 +147,5 @@ bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
 # Add fastlane to path
 export PATH="$HOME/.fastlane/bin:$PATH"
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-chruby ruby-2.5.1
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH="/Users/adam/.local/bin:$PATH"
